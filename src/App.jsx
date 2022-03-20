@@ -1,5 +1,6 @@
-// components Material-UI
-import {Button, TextField } from '@mui/material';
+// import {Button, TextField } from '@mui/material'; // components Material-UI
+import 'bootstrap/dist/css/bootstrap.min.css'; // import Bootstrap
+import { MdPayment } from 'react-icons/md' // import React-Icons / Material-UI
 
 // theme provider Material-UI
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -21,10 +22,10 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained">Contained</Button>
-      <Button variant="contained" disabled>Disabled</Button>
-      <Button variant="contained" href="#contained-buttons">Link</Button>
-      <TextField id="outlined-basic" label="Darlley" variant="outlined" fullWidth />
+      <h1 className="text-danger">
+        Aplicação React
+      </h1>
+      <MdPayment style={{fontSize: '60px', color: 'red'}} />
     </ThemeProvider>
   )
 }
