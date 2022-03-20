@@ -1,4 +1,7 @@
-import { Routes } from './Routes'
+import { Provider } from "react-redux"; // Redux
+import { store } from "./store/store";
+
+import Routes from './Routes'; // rotas
 
 // import {Button, TextField } from '@mui/material'; // components Material-UI
 import 'bootstrap/dist/css/bootstrap.min.css'; // import Bootstrap
@@ -23,9 +26,11 @@ const theme = createTheme({
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </Provider>
   )
 }
 export default App;
