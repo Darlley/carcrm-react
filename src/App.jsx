@@ -11,6 +11,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // import Bootstrap
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { blue } from '@mui/material/colors';
 
+import { 
+  Loading
+} from "./view/components/"
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -28,6 +32,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <Loading />
         <Routes />
       </ThemeProvider>
     </Provider>
